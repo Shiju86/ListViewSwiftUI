@@ -10,14 +10,17 @@ import SwiftUI
 
 struct TopPlaceDetail: View {
     
-    let placeName: String
+    let placeDescription: String
     let placeImage: String
     
     var body: some View {
         VStack{
             Image(placeImage)
-                
-            Text(placeName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            Text(placeDescription)
+                .font(.subheadline)
                 .foregroundColor(.red)
             
         }.padding()
@@ -27,7 +30,7 @@ struct TopPlaceDetail: View {
 #if DEBUG
 struct TopPlaceDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TopPlaceDetail(placeName: "", placeImage: "")
+        TopPlaceDetail(placeDescription: "", placeImage: "")
     }
 }
 #endif

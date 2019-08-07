@@ -15,17 +15,12 @@ struct ContentView: View {
         NavigationView{
             VStack {
                 
-//                HStack{
-//                    Image("batman-1")
-//                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .topLeading)
-//                    //.clipShape(Circle())
-//                }
-                                
                 List(topPlaces) { topPlace in
                     
-                    NavigationLink(destination: TopPlaceDetail(placeName: topPlace.name, placeImage: topPlace.image)) {
+                    NavigationLink(destination: TopPlaceDetail(placeDescription: topPlace.placeDescription, placeImage: topPlace.postImage)) {
                         
-                        TopPlaceRow(placeName: topPlace.name, imageName: topPlace.image)
+                        TopPlaceRow(ownerName: topPlace.name, ownerPlaceDescription: topPlace.placeDescription, ownerImage: topPlace.ownerImage, postImage: topPlace.postImage)
+                        
                     }
                 }
             }

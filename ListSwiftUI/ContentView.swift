@@ -15,11 +15,11 @@ struct ContentView: View {
         NavigationView{
             VStack {
                 
-                HStack{
-                    Image("batman-1")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .topLeading)
-                    //.clipShape(Circle())
-                }
+//                HStack{
+//                    Image("batman-1")
+//                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .topLeading)
+//                    //.clipShape(Circle())
+//                }
                                 
                 List(topPlaces) { topPlace in
                     

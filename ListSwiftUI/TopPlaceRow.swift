@@ -16,13 +16,13 @@ struct TopPlaceRow: View {
         
         HStack{
             Image("\(imageName)")
+                .resizable()
                 .frame(width: 50, height: 50, alignment: .leading)
                 .clipShape(Circle())
                 .overlay(
                     Circle().stroke(Color.red, lineWidth: 2)
                 )
                 .shadow(radius: 4)
-                
             
             Text("\(placeName)")
         }
